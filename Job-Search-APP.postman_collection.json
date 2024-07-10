@@ -1,0 +1,605 @@
+{
+	"info": {
+		"_postman_id": "d7452798-3b45-4504-bd34-378ffd645b03",
+		"name": "Job-Search-APP",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "32058438"
+	},
+	"item": [
+		{
+			"name": "User",
+			"item": [
+				{
+					"name": "signup",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"firstName\":\"mera\",\r\n    \"lastName\":\"mostafa\",\r\n    \"userName\":\"mai mostafa\",\r\n    \"email\":\"mera@gmail.com\",\r\n    \"password\":\"aM$iRa555\",\r\n    \"DOB\":\"2000-6-8\",\r\n    \"mobileNumber\":\"01501182736\",\r\n    \"role\":\"Company_HR\"\r\n\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/users/signup",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"users",
+								"signup"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "signin",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n\r\n\r\n    \"email\":\"amira010@gmail.com\",\r\n    \"password\":\"aM$iRa555\"\r\n\r\n}\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/users/signin",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"users",
+								"signin"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "updateAccount",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "token",
+								"value": "jobapp eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2NjhkMmJhZjYyOGI5NGJkMWJlOWRlNGYiLCJlbWFpbCI6ImFtaXJhMDEwQGdtYWlsLmNvbSIsImlhdCI6MTcyMDUyODM3MiwiZXhwIjoxNzIwNTM1NTcyfQ.QTNx7T-aKc3iDvLLjNw5aIcrJ0VBdeoFMQyLhUYU3bo",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n\r\n\"mobileNumber\":\"01122649701\"\r\n\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/users/updateAccount",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"users",
+								"updateAccount"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "deleteAccount",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "token",
+								"value": "jobapp eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2NjhkMmJhZjYyOGI5NGJkMWJlOWRlNGYiLCJlbWFpbCI6ImFtaXJhMDEwQGdtYWlsLmNvbSIsImlhdCI6MTcyMDUyODM3MiwiZXhwIjoxNzIwNTM1NTcyfQ.QTNx7T-aKc3iDvLLjNw5aIcrJ0VBdeoFMQyLhUYU3bo",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/users/deleteAccount",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"users",
+								"deleteAccount"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getUserData",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "token",
+								"value": "jobapp eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2NjhkMzNjZDAxNzViNGM0MjUwMmNhZjQiLCJlbWFpbCI6IkpvQGdtYWlsLmNvbSIsImlhdCI6MTcyMDUyOTk0MywiZXhwIjoxNzIwNTM3MTQzfQ.L8sqA4iK5-X7dXU_S6z6r7tfUno921n-C-wh3GrfJP0",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{url}}/users/getUserData",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"users",
+								"getUserData"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "ProfileData",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/users/ProfileData/668d33a20175b4c42502caf1",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"users",
+								"ProfileData",
+								"668d33a20175b4c42502caf1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "updatePassword",
+					"request": {
+						"method": "PATCH",
+						"header": [
+							{
+								"key": "token",
+								"value": "jobapp eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2NjhkOWQ1YTM2NTA4MWEyNTBjMDJhMmEiLCJlbWFpbCI6Im1hbmFyMTJAZ21haWwuY29tIiwiaWF0IjoxNzIwNTU2OTA0LCJleHAiOjE3MjA1NjQxMDR9.5DEkPeFiiV1UjjX25k_Q4HjkdF_1C7zHuBetw8Uy5sg",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n\r\n\r\n    \"password\":\"!123aMera\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/users/updatePassword",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"users",
+								"updatePassword"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Company",
+			"item": [
+				{
+					"name": "addCompany",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "token",
+								"value": "jobapp eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2NjhkYWFiMjgwZWJhMGIzZWFmZDliZTMiLCJlbWFpbCI6Im1lcmFAZ21haWwuY29tIiwiaWF0IjoxNzIwNTYwMzIyLCJleHAiOjE3MjA1Njc1MjJ9.xap5kK1Yh7p6wT2Wm2EFgG3jCqSFvfnuFQntHAMnE4g",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n\r\n \"companyName\":\"Web Company\",\r\n \"description\":\"78BackEnd intersted in NodeJs,ASP.Net\",\r\n \"industry\":\"E-Learning\",\r\n \"address\":\"Nasr City\",\r\n \"numberOfEmployees\":30,\r\n \"companyEmail\":\"web@gmail.com\",\r\n \"companyHR\":\"668daab280eba0b3eafd9be3\"\r\n\r\n\r\n\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/company/addCompany",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"company",
+								"addCompany"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "updateCompany",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "token",
+								"value": "jobapp eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2NjhkM2UxOWZiMTZmOGI3MDM2YzU4NzAiLCJlbWFpbCI6Im1vQGdtYWlsLmNvbSIsImlhdCI6MTcyMDUzNTkwMiwiZXhwIjoxNzIwNTQzMTAyfQ.Eax5U_CE7m2S6pWRjCylwK0b53T8EW_qlwD4QVhq6Ew",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n\r\n \"address\":\"Alex\"\r\n\r\n\r\n\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/company/updateCompany",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"company",
+								"updateCompany"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "deleteCompany",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "token",
+								"value": "jobapp eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2NjhkM2UxOWZiMTZmOGI3MDM2YzU4NzAiLCJlbWFpbCI6Im1vQGdtYWlsLmNvbSIsImlhdCI6MTcyMDUzNTkwMiwiZXhwIjoxNzIwNTQzMTAyfQ.Eax5U_CE7m2S6pWRjCylwK0b53T8EW_qlwD4QVhq6Ew",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{url}}/company/deleteCompany/668bea8d3f9ac19a00440565",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"company",
+								"deleteCompany",
+								"668bea8d3f9ac19a00440565"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "companyData",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "token",
+								"value": "jobapp eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2NjhkNGZlODNlYTI1NDYwMmRkOWE0MTMiLCJlbWFpbCI6Im5lcm9AZ21haWwuY29tIiwiaWF0IjoxNzIwNTQyMzI5LCJleHAiOjE3MjA1NDk1Mjl9.Llc_PGvFdtBYpC4NXuygMWACo3LBIWZcYSk36-MNQDc",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{url}}/company/getCompanyData/668bea8d3f9ac19a00440565",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"company",
+								"getCompanyData",
+								"668bea8d3f9ac19a00440565"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "companyWithAName",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "token",
+								"value": "jobapp eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2NjhkNGZlODNlYTI1NDYwMmRkOWE0MTMiLCJlbWFpbCI6Im5lcm9AZ21haWwuY29tIiwiaWF0IjoxNzIwNTM3MDc4LCJleHAiOjE3MjA1NDQyNzh9.B1cCsrta4YP4xErpv9HJnnUJKY0W0NxaObZv-37L8Sc",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{url}}/company/companyWithAName?companyName=raya0",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"company",
+								"companyWithAName"
+							],
+							"query": [
+								{
+									"key": "companyName",
+									"value": "raya0"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "applicationWithUser",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "token",
+								"value": "jobapp eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2NjhkNGZlODNlYTI1NDYwMmRkOWE0MTMiLCJlbWFpbCI6Im5lcm9AZ21haWwuY29tIiwiaWF0IjoxNzIwNTQyMzI5LCJleHAiOjE3MjA1NDk1Mjl9.Llc_PGvFdtBYpC4NXuygMWACo3LBIWZcYSk36-MNQDc",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{url}}/company/allApplications/668d5841df1727fd3814121f",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"company",
+								"allApplications",
+								"668d5841df1727fd3814121f"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Job",
+			"item": [
+				{
+					"name": "addJob",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "token",
+								"value": "jobapp eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2NjhkNGZlODNlYTI1NDYwMmRkOWE0MTMiLCJlbWFpbCI6Im5lcm9AZ21haWwuY29tIiwiaWF0IjoxNzIwNTM5MDQ4LCJleHAiOjE3MjA1NDYyNDh9.nV2Qa6QfjCXWdviUeXrUVJS0q7AyvjoH7ehNwZPlUsg",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n\"jobTitle\":\"NodeJs Back End Developer \",\r\n\"jobLocation\":\"hybrid\",\r\n\"workingTime\":\"full-time\",\r\n\"seniorityLevel\":\"Junior\",\r\n\"jobDescription\":\" Back End developer \",\r\n\"technicalSkills\":[\"NodeJs\",\"mongoose\",\"express\"],\r\n\"softSkills\":[\"time Mangment\"],\r\n\"addedBy\":\"668d4fe83ea254602dd9a413\",\r\n\"companyId\":\"668bea8d3f9ac19a00440565\"\r\n\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/jobs/addJob",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"jobs",
+								"addJob"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "updateJob",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "token",
+								"value": "jobapp eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2NjhkNGZlODNlYTI1NDYwMmRkOWE0MTMiLCJlbWFpbCI6Im5lcm9AZ21haWwuY29tIiwiaWF0IjoxNzIwNTM5MDQ4LCJleHAiOjE3MjA1NDYyNDh9.nV2Qa6QfjCXWdviUeXrUVJS0q7AyvjoH7ehNwZPlUsg",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n\"jobTitle\":\"BackEnd  developer\",\r\n\"jobLocation\":\"onsite\",\r\n\"workingTime\":\"full-time\",\r\n\"seniorityLevel\":\"Junior\",\r\n\"jobDescription\":\" build ecommerce websites\",\r\n\"technicalSkills\":[\"NodeJs\",\"java script\",\"next\"],\r\n\"softSkills\":[\"time Mangment\",\"self learner\"]\r\n\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/jobs/updateJob/668be09cb8b65ad0488526bc",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"jobs",
+								"updateJob",
+								"668be09cb8b65ad0488526bc"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "deleteJob",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "token",
+								"value": "jobapp eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2NjhkNGZlODNlYTI1NDYwMmRkOWE0MTMiLCJlbWFpbCI6Im5lcm9AZ21haWwuY29tIiwiaWF0IjoxNzIwNTQxMTAyLCJleHAiOjE3MjA1NDgzMDJ9.1btyHnxSHdYHtElYIGvA71YEYMsmOYJ4lED-6rWUr5U",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{url}}/jobs/deleteJob/668d5841df1727fd3814121f",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"jobs",
+								"deleteJob",
+								"668d5841df1727fd3814121f"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "listJobs",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "token",
+								"value": "jobapp eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2NjhiZTgwOTBkZWM0OGNkZTZmMTFiNmIiLCJlbWFpbCI6ImZhdGltYUAxMjJnbWFpbC5jb20iLCJpYXQiOjE3MjA0NDQ5NTcsImV4cCI6MTcyMDQ1MjE1N30.qdISUdl-d_BHjpHBZ11fjI6ypfLwmLZf0f064aTAGY8",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{url}}/jobs/listJobs",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"jobs",
+								"listJobs"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "jobsForCompany",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "token",
+								"value": "jobapp eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2NjhkNGZlODNlYTI1NDYwMmRkOWE0MTMiLCJlbWFpbCI6Im5lcm9AZ21haWwuY29tIiwiaWF0IjoxNzIwNTQxMTAyLCJleHAiOjE3MjA1NDgzMDJ9.1btyHnxSHdYHtElYIGvA71YEYMsmOYJ4lED-6rWUr5U",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{url}}/jobs/jobsForCompany?name=BackEnd707",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"jobs",
+								"jobsForCompany"
+							],
+							"query": [
+								{
+									"key": "name",
+									"value": "BackEnd707"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "addApplication",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "token",
+								"value": "jobapp eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2NjhkNTQ4MjFiMDY0ODRmMDE1ZTdlY2EiLCJlbWFpbCI6IkUxMkBnbWFpbC5jb20iLCJpYXQiOjE3MjA1MzkzODAsImV4cCI6MTcyMDU0NjU4MH0.6fTi42r3JcJbY_d5kx4STV3Nq0kohLYb1CC-iCptQR0",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n\"jobID\":\"668d5841df1727fd3814121f\",\r\n\"userId\":\"668d54821b06484f015e7eca\",\r\n\"userTechSkills\":[\"NodeJs\"],\r\n\"userSoftSkills\":[\"time Mangment\",\"self learner\"]\r\n\r\n\r\n\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/jobs/applyToJob",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"jobs",
+								"applyToJob"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "filterJobs",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "token",
+								"value": "jobapp eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2NjhkNTQ4MjFiMDY0ODRmMDE1ZTdlY2EiLCJlbWFpbCI6IkUxMkBnbWFpbC5jb20iLCJpYXQiOjE3MjA1NDA5MzksImV4cCI6MTcyMDU0ODEzOX0.NkFZjmH4rdYmN2UyR885UPKStMx-eDLa2w1ni4J_e5c",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{url}}/jobs/filterJobs?jobLocation=onsite&jobTitle=BackEnd  developer",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"jobs",
+								"filterJobs"
+							],
+							"query": [
+								{
+									"key": "jobLocation",
+									"value": "onsite"
+								},
+								{
+									"key": "jobTitle",
+									"value": "BackEnd  developer"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
